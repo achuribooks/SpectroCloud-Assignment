@@ -1,17 +1,18 @@
-# Debug Operations in Kubernetes - Working Draft
+# Debug Operations in Kubernetes Reference - Working Draft
 
 \[intro paragraph here]
+Use the Kubernetes kubectl command-line interface (CLI) to perform debug operations on your Kubernetes pods. 
 
-Current questions:
-- How do they arrange their tables? When describing UI elements, we tend to work our way R-L-T-D. For dates, sooner > later. Many other things, alphabetically or numerically. Since this is a reference doc, my first impression is we need to start with the basic command no matter what and then progress. Perhaps alphabetically? Need to take a look when I have Internet again how Spectro does it.
+Observations:
+- SpectroCloud doesn't seem to alphabetize tables. It looks like it follows a logical order of how the commands (parameters?) are executed. Or, a natural flow of how they may be used.
 
-| command | purpose | notes to self |
-| --- | --- | --- |
-| `kubectl` | A K8s-specific CLI that interacts with a K8s cluster control plane | (control plane = master node? virtual network)  |
-| `kubectl get pods` | lists all available pods and statuses | mentions specifying namespace; mentions when starting the debugging process to use this command |
-| `kubectl logs` | retrieves logs of a specific pod (how do we specify the pod?) - helpful for reviewing logs and debugging container | mentions using after `kubectl get pods` Since the literal title of this is debug ops, this might need to be highlighted or pulled out in another way |
-| `kubectl exec` | used to debug a container from the inside or explore the internal environment of the container; can also be used to review other log files or configs | says to use last/after `kubectl logs` | 
-| `kubectl debug` | used to create a clone of a pod that does not terminate if an error happens, giving you a better view of what's happening | is listed as another option when debugging a container, but in what way? |
+| Parameter                      | Description                                                                                                                                           | notes to self                                                                                                                                        |     |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| `kubectl`                      | A K8s-specific CLI that interacts with a K8s cluster control plane                                                                                    |                                                                                                                                                      |     |
+| `kubectl get pods --namespace` | Lists all available pods and statuses in the namespace; specify the namespace, if applicable.                                                         | mentions specifying namespace; mentions when starting the debugging process to use this command                                                      |     |
+| `kubectl logs <pod name>`      | Retrieves the logs of a specific pod. For additional details on the pod's event and status, use `kubectl describe pod <pod name`.                     | mentions using after `kubectl get pods` Since the literal title of this is debug ops, this might need to be highlighted or pulled out in another way |     |
+| `kubectl exec`                 | used to debug a container from the inside or explore the internal environment of the container; can also be used to review other log files or configs | says to use last/after `kubectl logs`                                                                                                                |     |
+| `kubectl debug`                | used to create a clone of a pod that does not terminate if an error happens, giving you a better view of what's happening                             | is listed as another option when debugging a container, but in what way?                                                                             |     |
 
 
 
