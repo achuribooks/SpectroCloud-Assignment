@@ -1,12 +1,12 @@
 # Debug Operations in Kubernetes Reference - Working Draft
 
 \[intro paragraph here]
-Use the Kubernetes kubectl command-line interface (CLI) to perform debug operations on your Kubernetes pods. 
+Use the kubectl command-line interface (CLI) to perform debug operations on your Kubernetes pods. 
 
 Observations:
 - SpectroCloud doesn't seem to alphabetize tables. It looks like it follows a logical order of how the commands (parameters?) are executed. Or, a natural flow of how they may be used.
 
-| Parameter                      | Description                                                                                                                                           | notes to self                                                                                                                                        |     |
+| Command                      | Description                                                                                                                                           | notes to self                                                                                                                                        |     |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
 | `kubectl`                      | A K8s-specific CLI that interacts with a K8s cluster control plane                                                                                    |                                                                                                                                                      |     |
 | `kubectl get pods --namespace` | Lists all available pods and statuses in the namespace; specify the namespace, if applicable.                                                         | mentions specifying namespace; mentions when starting the debugging process to use this command                                                      |     |

@@ -30,3 +30,15 @@ This document is a way to keep track of my learning progress over the course of 
 - Did not get the free-trial version of Palette, as it requires a business email. Will make do with other resources.
 #### Next Steps
 - Continue Udemy course, enhancing my base of understanding and using what I learn to refer back to assignment and continue refinement. 
+
+### Sunday, September 29
+- Completed Kubernetes crash course (offline YouTube video, NOT Udemy). 
+- Learned *lots* more about other Kubernetes components, including ConfigMap and Secret, Volume, and Deployment and Stateful Set. 
+- Learned about and set up Minikube for local K8s cluster testing.
+- Followed tutorial and set up first cluster by creating four YAML files: ConfigMap, Secret, and two Deployments (web application and database).
+- Learned basic YAML and kubectl terminology.
+- Could not test finished product, as we are still without Internet. Cell service restored, but it is limited to calls and texts.
+#### Next Steps
+- Bring laptop to office and test cluster.
+- Use cluster QA to continue work on assignment. 
+- If Internet at home is restored, download VS, Minikube, and Docker Desktop on main PC
