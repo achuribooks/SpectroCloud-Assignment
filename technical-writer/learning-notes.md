@@ -63,8 +63,8 @@ Nodes typically have multiple containers. Most work happens in the node where th
 #### Virtual Network
 The virtual network connects the control plane and nodes, allowing them to communicate. The virtual network completes the cluster and turns all nodes into one powerful machine.
 
-### Components
-The main components of Kubernetes are:
+### Resource Types
+Essential Kubernetes resource types are:
 - **Pod** &ndash; Exists as an abstraction of a container
 - **Service** &ndash; Sets static IPs, balances loads, and allows pods to communicate
 - **Ingress** &ndash; Routes traffic into clusters
@@ -134,7 +134,7 @@ Minikube allows us to run clusters, but to communicate with a K8s cluster, we us
 #### Kubectl
 Kubectl is the CLI for K8s clusters that can be used to interact with *any type* of K8s cluster setup. 
 
-When you submit a kubectl command create components, it goes to the master node's API server, and the worker nodes carry out the command. The worker nodes create pods and enable them to run on the node. Kubectl can also be used to destroy pods and create services.
+When you submit a kubectl command to create components, it goes to the master node's API server, and the worker nodes carry out the command. The worker nodes create pods and enable them to run on the node. Kubectl can also be used to destroy pods and create services.
 
 #### Usage
 You need an applicable driver to run Minikube &mdash; the preferred one is Docker. While Minikube has Docker pre-installed, Minikube *itself* is a container on our local machine, so we need a program like Docker to actually use it. 
@@ -224,7 +224,7 @@ env:
 		  key: mongo-password         #data from secret file
 - name: DB_URL                        #predefined by image
   valueFrom:
-	  secretKeyRef:
+	  configMapKeyRef:
 		  name: mongo-config          #name from configmap file
 		  key: mongo-url              #data from configmap file
 ```
@@ -271,7 +271,7 @@ You can give any K8s component a label. Labels are key:value pairs attached to K
 
 Labels do not provide uniqueness. Each pod replica will have a unique name but the same labels (as long as the pods are from the same Deployment). So, we might have three replicas named mongo-101, mongo-111, and mongo-210, but each can have a label of `app: mongo-db`.
 
-Labels are required for pods. For other components, like Deployment and ConfigMap, they're optional, but it's good practice to use labels.
+Labels are required for pods. For other resource types, like Deployment and ConfigMap, they're optional, but it's good practice to use labels.
 
 Label selectors specify which pods belong to which deployment.
 
@@ -282,10 +282,6 @@ spec:
 		matchLabels:
 			app: mongo-db
 ```
-
-
-
-
 
 ##### Service
 

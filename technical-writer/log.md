@@ -41,4 +41,10 @@ This document is a way to keep track of my learning progress over the course of 
 #### Next Steps
 - Bring laptop to office and test cluster.
 - Use cluster QA to continue work on assignment. 
-- If Internet at home is restored, download VS, Minikube, and Docker Desktop on main PC
+- If Internet at home is restored, download VS, Minikube, and Docker Desktop on main PC.
+
+### Monday, September 30
+- Debugged my own K8s cluster and got it to run! Could not verify output due to lack of Internet? Will have to try again at the office tomorrow.
+- Worked on assignment. Identified more questions.
+#### Next Steps
+- Determined that Internet and cell data likely won't be restored for several more days... Will be staying at the office after work to finish a solid draft of assignment, giving myself Wednesday to polish it. 

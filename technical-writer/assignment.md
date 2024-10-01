@@ -1,22 +1,28 @@
 # Debug Operations in Kubernetes Reference - Working Draft
 
-\[intro paragraph here]
-Use the kubectl command-line interface (CLI) to perform debug operations on your Kubernetes pods. 
+Use the `kubectl` command-line interface (CLI) to communicate with a Kubernetes cluster control plane using the Kubernetes API and perform debug operations on your Kubernetes clusters. 
 
-Observations:
-- SpectroCloud doesn't seem to alphabetize tables. It looks like it follows a logical order of how the commands (parameters?) are executed. Or, a natural flow of how they may be used.
+\[more data]
 
-| Command                      | Description                                                                                                                                           | notes to self                                                                                                                                        |     |
-| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| `kubectl`                      | A K8s-specific CLI that interacts with a K8s cluster control plane                                                                                    |                                                                                                                                                      |     |
-| `kubectl get pods --namespace` | Lists all available pods and statuses in the namespace; specify the namespace, if applicable.                                                         | mentions specifying namespace; mentions when starting the debugging process to use this command                                                      |     |
-| `kubectl logs <pod name>`      | Retrieves the logs of a specific pod. For additional details on the pod's event and status, use `kubectl describe pod <pod name`.                     | mentions using after `kubectl get pods` Since the literal title of this is debug ops, this might need to be highlighted or pulled out in another way |     |
-| `kubectl exec`                 | used to debug a container from the inside or explore the internal environment of the container; can also be used to review other log files or configs | says to use last/after `kubectl logs`                                                                                                                |     |
-| `kubectl debug`                | used to create a clone of a pod that does not terminate if an error happens, giving you a better view of what's happening                             | is listed as another option when debugging a container, but in what way?                                                                             |     |
+The following table lists helpful `kubectl` operations helpful for debugging Kubernetes clusters.
+
+| Operation                      | Description                                                                                                                                   | notes to self                                                                                                                                        |     |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| `kubectl get pods --namespace` | List all available pods and statuses in the current namespace; specify the namespace, if applicable.                                          | mentions specifying namespace; mentions when starting the debugging process to use this command<br><br>                                              |     |
+| `kubectl logs <pod name>`      | Retrieve the logs of a specific pod. For additional details on the pod's event and status, use `kubectl describe pod <pod name>`.             | mentions using after `kubectl get pods` Since the literal title of this is debug ops, this might need to be highlighted or pulled out in another way |     |
+| `kubectl exec`                 | Debug a container from the inside or explore the internal environment of the container; can also be used to review other log files or configs | says to use last/after `kubectl logs`. Can't say I understand this one...                                                                            |     |
+| `kubectl debug`                | Create a clone of a pod that does not terminate if an error occurs within the container.                                                      | is listed as another option when debugging a container, but in what way?                                                                             |     |
+
+**TIP:** Use the `kubectl describe [resource type]` command at any time to see additional details. `-o wide` can also be applied to any `kubectl get` command for additional information. (When would it be more advantageous to use one over the other?)
+
+(Might benefit from an example column with situations? Or example output highlighting errors?)
 
 
+## References
 
+- https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-strong-getting-started-strong-
 
+- [What is Kubernetes](https://kubernetes.io/docs/concepts/overview/)
 
 
 
