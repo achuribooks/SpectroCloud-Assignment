@@ -71,6 +71,17 @@ This document is a way to keep track of my learning progress over the course of 
 - Did not get my local host to work, but I'm out of time.
 
 #### Next Steps
+
 - Get answers to outstanding questions.
 - Review more reference documentation examples for best way to handle "root commands," repetition, and readability. 
 - Head into office early again and finish assignment after work tomorrow (still no Internet or cell service...), planning to perform one final proof read/copyedit before submission Thursday morning. 
+
+### Wednesday, October 2
+
+- Stayed after work to complete assignment.
+- Lots of revisions to assignment for both conciseness and accuracy.
+- Celebrated the revival of the Internet upon arriving home.
+
+#### Next Steps
+
+- Perform final copyedit in morning and initiate PR.
