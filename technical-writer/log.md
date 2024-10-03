@@ -85,3 +85,7 @@ This document is a way to keep track of my learning progress over the course of 
 #### Next Steps
 
 - Perform final copyedit in morning and initiate PR.
+
+### Thursday, October 3
+
+- Completed assignment!
